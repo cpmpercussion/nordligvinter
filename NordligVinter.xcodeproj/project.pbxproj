@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56BC95A4155AF9F1009F5CA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95A3155AF9F1009F5CA6 /* UIKit.framework */; };
+		56BC95A6155AF9F1009F5CA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95A5155AF9F1009F5CA6 /* Foundation.framework */; };
+		56BC95A8155AF9F1009F5CA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95A7155AF9F1009F5CA6 /* CoreGraphics.framework */; };
+		56BC95AE155AF9F1009F5CA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56BC95AC155AF9F1009F5CA6 /* InfoPlist.strings */; };
+		56BC95B0155AF9F1009F5CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC95AF155AF9F1009F5CA6 /* main.m */; };
+		56BC95B4155AF9F1009F5CA6 /* NordligVinterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC95B3155AF9F1009F5CA6 /* NordligVinterAppDelegate.m */; };
+		56BC95B7155AF9F1009F5CA6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BC95B5155AF9F1009F5CA6 /* MainStoryboard_iPhone.storyboard */; };
+		56BC95BA155AF9F1009F5CA6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BC95B8155AF9F1009F5CA6 /* MainStoryboard_iPad.storyboard */; };
+		56BC95BD155AF9F1009F5CA6 /* NordligVinterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC95BC155AF9F1009F5CA6 /* NordligVinterViewController.m */; };
+		56BC95C5155AF9F1009F5CA6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95C4155AF9F1009F5CA6 /* SenTestingKit.framework */; };
+		56BC95C6155AF9F1009F5CA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95A3155AF9F1009F5CA6 /* UIKit.framework */; };
+		56BC95C7155AF9F1009F5CA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95A5155AF9F1009F5CA6 /* Foundation.framework */; };
+		56BC95CF155AF9F1009F5CA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56BC95CD155AF9F1009F5CA6 /* InfoPlist.strings */; };
+		56BC95D2155AF9F2009F5CA6 /* NordligVinterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC95D1155AF9F2009F5CA6 /* NordligVinterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56BC95C8155AF9F1009F5CA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56BC9596155AF9F0009F5CA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56BC959E155AF9F1009F5CA6;
+			remoteInfo = NordligVinter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		56BC959F155AF9F1009F5CA6 /* NordligVinter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NordligVinter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56BC95A3155AF9F1009F5CA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		56BC95A5155AF9F1009F5CA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		56BC95A7155AF9F1009F5CA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		56BC95AB155AF9F1009F5CA6 /* NordligVinter-Info.plist */ = {isa = PBXFileReference; path = "NordligVinter-Info.plist"; sourceTree = "<group>"; };
+		56BC95AD155AF9F1009F5CA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		56BC95AF155AF9F1009F5CA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		56BC95B1155AF9F1009F5CA6 /* NordligVinter-Prefix.pch */ = {isa = PBXFileReference; path = "NordligVinter-Prefix.pch"; sourceTree = "<group>"; };
+		56BC95B2155AF9F1009F5CA6 /* NordligVinterAppDelegate.h */ = {isa = PBXFileReference; path = NordligVinterAppDelegate.h; sourceTree = "<group>"; };
+		56BC95B3155AF9F1009F5CA6 /* NordligVinterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NordligVinterAppDelegate.m; sourceTree = "<group>"; };
+		56BC95B6155AF9F1009F5CA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		56BC95B9155AF9F1009F5CA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		56BC95BB155AF9F1009F5CA6 /* NordligVinterViewController.h */ = {isa = PBXFileReference; path = NordligVinterViewController.h; sourceTree = "<group>"; };
+		56BC95BC155AF9F1009F5CA6 /* NordligVinterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NordligVinterViewController.m; sourceTree = "<group>"; };
+		56BC95C3155AF9F1009F5CA6 /* NordligVinterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NordligVinterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56BC95C4155AF9F1009F5CA6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		56BC95CC155AF9F1009F5CA6 /* NordligVinterTests-Info.plist */ = {isa = PBXFileReference; path = "NordligVinterTests-Info.plist"; sourceTree = "<group>"; };
+		56BC95CE155AF9F1009F5CA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		56BC95D0155AF9F2009F5CA6 /* NordligVinterTests.h */ = {isa = PBXFileReference; path = NordligVinterTests.h; sourceTree = "<group>"; };
+		56BC95D1155AF9F2009F5CA6 /* NordligVinterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NordligVinterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56BC959C155AF9F1009F5CA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56BC95A4155AF9F1009F5CA6 /* UIKit.framework in Frameworks */,
+				56BC95A6155AF9F1009F5CA6 /* Foundation.framework in Frameworks */,
+				56BC95A8155AF9F1009F5CA6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56BC95BF155AF9F1009F5CA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56BC95C5155AF9F1009F5CA6 /* SenTestingKit.framework in Frameworks */,
+				56BC95C6155AF9F1009F5CA6 /* UIKit.framework in Frameworks */,
+				56BC95C7155AF9F1009F5CA6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56BC9594155AF9F0009F5CA6 = {
+			isa = PBXGroup;
+			children = (
+				56BC95A9155AF9F1009F5CA6 /* NordligVinter */,
+				56BC95CA155AF9F1009F5CA6 /* NordligVinterTests */,
+				56BC95A2155AF9F1009F5CA6 /* Frameworks */,
+				56BC95A0155AF9F1009F5CA6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56BC95A0155AF9F1009F5CA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56BC959F155AF9F1009F5CA6 /* NordligVinter.app */,
+				56BC95C3155AF9F1009F5CA6 /* NordligVinterTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56BC95A2155AF9F1009F5CA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56BC95A3155AF9F1009F5CA6 /* UIKit.framework */,
+				56BC95A5155AF9F1009F5CA6 /* Foundation.framework */,
+				56BC95A7155AF9F1009F5CA6 /* CoreGraphics.framework */,
+				56BC95C4155AF9F1009F5CA6 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56BC95A9155AF9F1009F5CA6 /* NordligVinter */ = {
+			isa = PBXGroup;
+			children = (
+				56BC95B2155AF9F1009F5CA6 /* NordligVinterAppDelegate.h */,
+				56BC95B3155AF9F1009F5CA6 /* NordligVinterAppDelegate.m */,
+				56BC95B5155AF9F1009F5CA6 /* MainStoryboard_iPhone.storyboard */,
+				56BC95B8155AF9F1009F5CA6 /* MainStoryboard_iPad.storyboard */,
+				56BC95BB155AF9F1009F5CA6 /* NordligVinterViewController.h */,
+				56BC95BC155AF9F1009F5CA6 /* NordligVinterViewController.m */,
+				56BC95AA155AF9F1009F5CA6 /* Supporting Files */,
+			);
+			path = NordligVinter;
+			sourceTree = "<group>";
+		};
+		56BC95AA155AF9F1009F5CA6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				56BC95AB155AF9F1009F5CA6 /* NordligVinter-Info.plist */,
+				56BC95AC155AF9F1009F5CA6 /* InfoPlist.strings */,
+				56BC95AF155AF9F1009F5CA6 /* main.m */,
+				56BC95B1155AF9F1009F5CA6 /* NordligVinter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56BC95CA155AF9F1009F5CA6 /* NordligVinterTests */ = {
+			isa = PBXGroup;
+			children = (
+				56BC95D0155AF9F2009F5CA6 /* NordligVinterTests.h */,
+				56BC95D1155AF9F2009F5CA6 /* NordligVinterTests.m */,
+				56BC95CB155AF9F1009F5CA6 /* Supporting Files */,
+			);
+			path = NordligVinterTests;
+			sourceTree = "<group>";
+		};
+		56BC95CB155AF9F1009F5CA6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				56BC95CC155AF9F1009F5CA6 /* NordligVinterTests-Info.plist */,
+				56BC95CD155AF9F1009F5CA6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56BC959E155AF9F1009F5CA6 /* NordligVinter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56BC95D5155AF9F2009F5CA6 /* Build configuration list for PBXNativeTarget "NordligVinter" */;
+			buildPhases = (
+				56BC959B155AF9F1009F5CA6 /* Sources */,
+				56BC959C155AF9F1009F5CA6 /* Frameworks */,
+				56BC959D155AF9F1009F5CA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NordligVinter;
+			productName = NordligVinter;
+			productReference = 56BC959F155AF9F1009F5CA6 /* NordligVinter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56BC95C2155AF9F1009F5CA6 /* NordligVinterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56BC95D8155AF9F2009F5CA6 /* Build configuration list for PBXNativeTarget "NordligVinterTests" */;
+			buildPhases = (
+				56BC95BE155AF9F1009F5CA6 /* Sources */,
+				56BC95BF155AF9F1009F5CA6 /* Frameworks */,
+				56BC95C0155AF9F1009F5CA6 /* Resources */,
+				56BC95C1155AF9F1009F5CA6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56BC95C9155AF9F1009F5CA6 /* PBXTargetDependency */,
+			);
+			name = NordligVinterTests;
+			productName = NordligVinterTests;
+			productReference = 56BC95C3155AF9F1009F5CA6 /* NordligVinterTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56BC9596155AF9F0009F5CA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Charles Martin Percussion";
+			};
+			buildConfigurationList = 56BC9599155AF9F0009F5CA6 /* Build configuration list for PBXProject "NordligVinter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 56BC9594155AF9F0009F5CA6;
+			productRefGroup = 56BC95A0155AF9F1009F5CA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56BC959E155AF9F1009F5CA6 /* NordligVinter */,
+				56BC95C2155AF9F1009F5CA6 /* NordligVinterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56BC959D155AF9F1009F5CA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56BC95AE155AF9F1009F5CA6 /* InfoPlist.strings in Resources */,
+				56BC95B7155AF9F1009F5CA6 /* MainStoryboard_iPhone.storyboard in Resources */,
+				56BC95BA155AF9F1009F5CA6 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56BC95C0155AF9F1009F5CA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56BC95CF155AF9F1009F5CA6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56BC95C1155AF9F1009F5CA6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56BC959B155AF9F1009F5CA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56BC95B0155AF9F1009F5CA6 /* main.m in Sources */,
+				56BC95B4155AF9F1009F5CA6 /* NordligVinterAppDelegate.m in Sources */,
+				56BC95BD155AF9F1009F5CA6 /* NordligVinterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56BC95BE155AF9F1009F5CA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56BC95D2155AF9F2009F5CA6 /* NordligVinterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56BC95C9155AF9F1009F5CA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56BC959E155AF9F1009F5CA6 /* NordligVinter */;
+			targetProxy = 56BC95C8155AF9F1009F5CA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		56BC95AC155AF9F1009F5CA6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56BC95AD155AF9F1009F5CA6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		56BC95B5155AF9F1009F5CA6 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56BC95B6155AF9F1009F5CA6 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		56BC95B8155AF9F1009F5CA6 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56BC95B9155AF9F1009F5CA6 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		56BC95CD155AF9F1009F5CA6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56BC95CE155AF9F1009F5CA6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56BC95D3155AF9F2009F5CA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		56BC95D4155AF9F2009F5CA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56BC95D6155AF9F2009F5CA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NordligVinter/NordligVinter-Prefix.pch";
+				INFOPLIST_FILE = "NordligVinter/NordligVinter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		56BC95D7155AF9F2009F5CA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NordligVinter/NordligVinter-Prefix.pch";
+				INFOPLIST_FILE = "NordligVinter/NordligVinter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		56BC95D9155AF9F2009F5CA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NordligVinter.app/NordligVinter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NordligVinter/NordligVinter-Prefix.pch";
+				INFOPLIST_FILE = "NordligVinterTests/NordligVinterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		56BC95DA155AF9F2009F5CA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NordligVinter.app/NordligVinter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NordligVinter/NordligVinter-Prefix.pch";
+				INFOPLIST_FILE = "NordligVinterTests/NordligVinterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56BC9599155AF9F0009F5CA6 /* Build configuration list for PBXProject "NordligVinter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56BC95D3155AF9F2009F5CA6 /* Debug */,
+				56BC95D4155AF9F2009F5CA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56BC95D5155AF9F2009F5CA6 /* Build configuration list for PBXNativeTarget "NordligVinter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56BC95D6155AF9F2009F5CA6 /* Debug */,
+				56BC95D7155AF9F2009F5CA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		56BC95D8155AF9F2009F5CA6 /* Build configuration list for PBXNativeTarget "NordligVinterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56BC95D9155AF9F2009F5CA6 /* Debug */,
+				56BC95DA155AF9F2009F5CA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56BC9596155AF9F0009F5CA6 /* Project object */;
+}
