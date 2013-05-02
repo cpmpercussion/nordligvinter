@@ -18,9 +18,16 @@
 @synthesize viewController = viewController_;
 @synthesize audioController = _audioController;
 
+extern void bonk_tilde_setup(void);
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjects:@[@"180",@"180",@"180"] forKeys:@[@"IceDrumLength",@"SnowBellsLength",@"ClustersLength"]];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+    
+    
     // Override point for customization after application launch.
     application.idleTimerDisabled = YES; // we don't want the screen to sleep.
     self.viewController = (NordligVinterViewController *) self.window.rootViewController;
@@ -29,7 +36,7 @@
     if ([self.audioController configurePlaybackWithSampleRate:22050 numberChannels:2 inputEnabled:YES mixingEnabled:NO] != PdAudioOK) {
         NSLog(@"failed to initialise audio components");
     }
-    
+    bonk_tilde_setup();
     
     // set AppDelegate as PdRecieverDelegate to recieve messages from pd
     [PdBase setDelegate:self];
@@ -40,8 +47,6 @@
     [PdBase subscribe:@"clustercomp"];
     [PdBase subscribe:@"snowbellcomp"];
     [PdBase subscribe:@"inputvolume"];
-    
-    
     
     //[self.audioController configureTicksPerBuffer:128];
 	[PdBase openFile:@"nordligvinter_main.pd" path:[[NSBundle mainBundle] resourcePath]];
@@ -54,6 +59,14 @@
     self.viewController.midi = midi;
     
     
+    // Send Length Preferences to Pd
+    [[NSUserDefaults standardUserDefaults] synchronize]; 
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"IceDrumLength"] intValue] toReceiver:@"icedrumlength"];
+
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"SnowBellsLength"] intValue] toReceiver:@"snowbellslength"];
+
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"ClustersLength"] intValue] toReceiver:@"clusterslength"];
+
     return YES;
 }
 
@@ -115,7 +128,16 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    
+    
     self.audioController.active = YES;
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"IceDrumLength"] intValue] toReceiver:@"icedrumlength"];
+    
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"SnowBellsLength"] intValue] toReceiver:@"snowbellslength"];
+    
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"ClustersLength"] intValue] toReceiver:@"clusterslength"];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

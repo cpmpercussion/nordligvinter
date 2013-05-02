@@ -51,45 +51,9 @@
     
     [midiLabel setText: @""];
     [midiInterfaceLabel setText: @""];
-}
-
-- (void)viewDidUnload
-{
-    [PdBase setDelegate:nil];
-    [self setIceDrumSwitch:nil];
-    [self setIceDrumProgress:nil];
-    [self setSnowBellSwitch:nil];
-    [self setSnowBellProgress:nil];
-    [self setClusterSwitch:nil];
-    [self setClusterProgress:nil];
-    [self setDefaultProgress:nil];
-    [self setInputLevel:nil];
-    [self setReverbSwitch:nil];
-    [self setInputLevelSlider:nil];
-    [self setMidiLabel:nil];
-    [self setMidiInterfaceLabel:nil];
-    [super viewDidUnload];
-
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
+    
+    
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
