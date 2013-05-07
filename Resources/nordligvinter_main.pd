@@ -1,4 +1,4 @@
-#N canvas 486 73 1111 828 10;
+#N canvas 676 115 1111 828 10;
 #X declare -path .;
 #X declare -path rj;
 #X declare -path .;
@@ -19,7 +19,7 @@
 #X declare -path fieldrecordings;
 #X obj 814 450 declare -path .;
 #X obj 811 473 declare -path rj;
-#X obj 578 -7 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 578 -7 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 694 -7 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -530,7 +530,7 @@ returns to Cs;
 #X obj 49 133 spigot;
 #X obj 240 5 inlet;
 #X obj 47 203 outlet;
-#X obj 165 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 165 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
@@ -1509,7 +1509,7 @@ returns to Cs;
 #X obj 49 133 spigot;
 #X obj 240 5 inlet;
 #X obj 47 203 outlet;
-#X obj 165 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 165 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
@@ -1521,7 +1521,7 @@ returns to Cs;
 #X connect 7 0 4 1;
 #X coords 0 -1 1 1 85 25 1 100 100;
 #X restore 849 298 pd sel01;
-#X obj 847 222 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 847 222 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #N canvas 727 49 477 425 fastclustermetro 0;
 #X obj 303 241 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -1638,7 +1638,7 @@ returns to Cs;
 #X connect 23 0 22 1;
 #X connect 24 0 6 1;
 #X restore 838 277 pd fastclustermetro;
-#N canvas 135 379 1386 380 icedrumcomposition 0;
+#N canvas 343 508 1386 380 icedrumcomposition 0;
 #X obj 82 116 g_hsl comp 0 100;
 #X msg 82 95 comp \$1;
 #X obj 82 73 line;
@@ -2282,7 +2282,7 @@ returns to Cs;
 #X connect 6 0 4 1;
 #X restore 374 693 pd output;
 #X obj -25 46 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 10000 1;
+-1 -1 0 1;
 #X obj -28 24 r icedrumcomp;
 #X obj 120 46 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
@@ -2291,7 +2291,7 @@ returns to Cs;
 -1 -1 0 1;
 #X obj 255 24 r snowbellcomp;
 #X obj 395 46 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 9500 1;
 #X obj 578 -30 r icedrumswitchin;
 #X obj 693 -28 r clusterswitchin;
 #X obj 808 -27 r snowbellswitchin;
@@ -2386,8 +2386,8 @@ returns to Cs;
 #X msg 389 101 240;
 #X msg 637 144 360;
 #X obj 11 236 r attackCounter;
-#X obj 30 284 dual_random_pass;
-#X obj 8 195 / 100;
+#X obj 29 299 dual_random_pass;
+#X obj 122 262 / 100;
 #X connect 2 0 6 0;
 #X connect 2 0 58 0;
 #X connect 3 0 7 0;
@@ -2447,9 +2447,9 @@ returns to Cs;
 #X connect 43 0 65 0;
 #X connect 44 0 42 0;
 #X connect 45 0 54 0;
-#X connect 45 0 96 0;
 #X connect 45 1 23 1;
 #X connect 45 2 22 1;
+#X connect 45 2 96 0;
 #X connect 45 3 50 1;
 #X connect 45 4 21 1;
 #X connect 45 4 20 2;
