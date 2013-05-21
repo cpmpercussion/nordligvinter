@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -129,6 +129,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Cbv-wm-Es7">
+                                <rect key="frame" x="189" y="878" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="continuous performance mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bxP-Kr-ftI">
+                                <rect key="frame" x="283" y="881" width="230" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -154,6 +165,30 @@
     <resources>
         <image name="Default-Portrait~ipad.png" width="768" height="1004"/>
     </resources>
+    <classes>
+        <class className="NordligVinterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NordligVinterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clusterSwitched:"/>
+                <relationship kind="action" name="iceDrumSwitched:"/>
+                <relationship kind="action" name="inLevelSliderMoved:"/>
+                <relationship kind="action" name="reverbSwitched:"/>
+                <relationship kind="action" name="snowBellSwitched:"/>
+                <relationship kind="outlet" name="clusterProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="clusterSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="defaultProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="iceDrumProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="iceDrumSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="inputLevel" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="inputLevelSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="midiInterfaceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="midiLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="reverbSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="snowBellProgress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="snowBellSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
