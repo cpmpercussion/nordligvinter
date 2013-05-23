@@ -23,7 +23,7 @@ extern void bonk_tilde_setup(void);
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjects:@[@"180",@"180",@"180"] forKeys:@[@"IceDrumLength",@"SnowBellsLength",@"ClustersLength"]];
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjects:@[@"160",@"240",@"120"] forKeys:@[@"IceDrumLength",@"SnowBellsLength",@"ClustersLength"]];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
     
