@@ -19,7 +19,6 @@
 		565FC293155EDACA00181C45 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 565FC290155ED9F100181C45 /* libpd-ios.a */; };
 		565FC295155EDAE000181C45 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565FC294155EDAE000181C45 /* AVFoundation.framework */; };
 		565FC297155EDAE800181C45 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565FC296155EDAE800181C45 /* AudioToolbox.framework */; };
-		5660E6171765ECE300B808A5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5660E6161765ECE300B808A5 /* README.md */; };
 		56614D7F174C7D1500609BD8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 56614D7E174C7D1500609BD8 /* README.md */; };
 		56614D82174C7D2000609BD8 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 56614D81174C7D2000609BD8 /* LICENSE.md */; };
 		567AEC861654D0860030D64B /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 567AEC851654D0860030D64B /* Default-Portrait~ipad.png */; };
@@ -481,9 +480,7 @@
 		565FC288155ED9F100181C45 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		565FC294155EDAE000181C45 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		565FC296155EDAE800181C45 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		5660E6141765ECD800B808A5 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
-		5660E6161765ECE300B808A5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		5660E6181765ED0000B808A5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5660E6181765ED0000B808A5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		56614D7E174C7D1500609BD8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		56614D81174C7D2000609BD8 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		567AEC851654D0860030D64B /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
@@ -974,9 +971,6 @@
 		56BC9594155AF9F0009F5CA6 = {
 			isa = PBXGroup;
 			children = (
-				5660E6181765ED0000B808A5 /* .gitignore */,
-				5660E6141765ECD800B808A5 /* LICENSE.md */,
-				5660E6161765ECE300B808A5 /* README.md */,
 				56EF28001730F25700AC7196 /* Image Resources */,
 				565FC296155EDAE800181C45 /* AudioToolbox.framework */,
 				565FC294155EDAE000181C45 /* AVFoundation.framework */,
@@ -1019,6 +1013,7 @@
 				56BC95B2155AF9F1009F5CA6 /* NordligVinterAppDelegate.h */,
 				56BC95B3155AF9F1009F5CA6 /* NordligVinterAppDelegate.m */,
 				56BC95B5155AF9F1009F5CA6 /* MainStoryboard_iPhone.storyboard */,
+				5660E6181765ED0000B808A5 /* .gitignore */,
 				56614D81174C7D2000609BD8 /* LICENSE.md */,
 				56614D7E174C7D1500609BD8 /* README.md */,
 				56BC95B8155AF9F1009F5CA6 /* MainStoryboard_iPad.storyboard */,
@@ -1975,7 +1970,6 @@
 				569E3FC91732988400340E9D /* dual_random_pass.pd in Resources */,
 				56614D7F174C7D1500609BD8 /* README.md in Resources */,
 				56614D82174C7D2000609BD8 /* LICENSE.md in Resources */,
-				5660E6171765ECE300B808A5 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

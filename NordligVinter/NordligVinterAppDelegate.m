@@ -33,7 +33,7 @@ extern void bonk_tilde_setup(void);
     self.viewController = (NordligVinterViewController *) self.window.rootViewController;
     
     _audioController = [[PdAudioController alloc] init];
-    if ([self.audioController configurePlaybackWithSampleRate:22050 numberChannels:2 inputEnabled:YES mixingEnabled:NO] != PdAudioOK) {
+    if ([self.audioController configurePlaybackWithSampleRate:44100 numberChannels:2 inputEnabled:YES mixingEnabled:NO] != PdAudioOK) {
         NSLog(@"failed to initialise audio components");
     }
     bonk_tilde_setup();
