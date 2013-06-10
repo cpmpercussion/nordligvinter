@@ -190,30 +190,6 @@
     <resources>
         <image name="Default-568h.png" width="320" height="568"/>
     </resources>
-    <classes>
-        <class className="NordligVinterViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NordligVinterViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="clusterSwitched:"/>
-                <relationship kind="action" name="iceDrumSwitched:"/>
-                <relationship kind="action" name="inLevelSliderMoved:"/>
-                <relationship kind="action" name="reverbSwitched:"/>
-                <relationship kind="action" name="snowBellSwitched:"/>
-                <relationship kind="outlet" name="clusterProgress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="clusterSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="defaultProgress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="iceDrumProgress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="iceDrumSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="inputLevel" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="inputLevelSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="midiInterfaceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="midiLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="reverbSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="snowBellProgress" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="snowBellSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
