@@ -11,6 +11,14 @@
 #import "PGMidi.h"
 #import <CoreMIDI/CoreMIDI.h>
 
+#define PAUSE_LENGTH 30
+
+#define COMPOSITION_NONE 0
+#define COMPOSITION_ICEDRUM 1
+#define COMPOSITION_CLUSTERS 2
+#define COMPOSITION_SNOWBELLS 3
+
+
 @interface NordligVinterViewController () <PGMidiDelegate, PGMidiSourceDelegate>
 
 @end
@@ -80,6 +88,7 @@
     {
         [PdBase sendFloat:1 toReceiver:@"icedrumswitchin"];
         NSLog(@"ice drum switched ON!");
+        self.currentComposition = @"icedrumswitchin";
     } else {
         [PdBase sendFloat:0 toReceiver:@"icedrumswitchin"];
         NSLog(@"ice drum switched OFF!");
@@ -90,6 +99,7 @@
     {
         [PdBase sendFloat:1 toReceiver:@"snowbellswitchin"];
         NSLog(@"snow bells switched ON!");
+        self.currentComposition = @"snowbellswitchin";
     } else {
         [PdBase sendFloat:0 toReceiver:@"snowbellswitchin"];
         NSLog(@"snow bells switched OFF!");
@@ -100,6 +110,7 @@
     {
         [PdBase sendFloat:1 toReceiver:@"clusterswitchin"];
         NSLog(@"clusters switched ON!");
+        self.currentComposition = @"clusterswitchin";
     } else {
         [PdBase sendFloat:0 toReceiver:@"clusterswitchin"];
         NSLog(@"clusters switched OFF!");
@@ -123,15 +134,60 @@
     [PdBase sendFloat:a toReceiver:@"reverbsend"];
 }
 
+- (IBAction)continuousPerformanceSwitched:(UISwitch *)sender {
+    // Start continuous performance.
+    self.continuousPerformance = sender.on;
+}
+
+
+- (void)cueNextComposition:(int)compositionNumber {
+    
+    [NSTimer scheduledTimerWithTimeInterval:self.inBetweenPauseLength
+                                     target:self
+                                   selector:@selector(playNextComposition:)
+                                   userInfo:[NSNumber numberWithInt:compositionNumber]
+                                    repeats:NO];
+}
+
+- (void)playNextComposition:(NSTimer *)cueTimer {
+    int compositionNumber = [(NSNumber *) cueTimer.userInfo intValue];
+    
+    if (compositionNumber == COMPOSITION_ICEDRUM) {
+        [self.iceDrumSwitch setOn:YES animated:YES];
+        [PdBase sendFloat:1 toReceiver:@"icedrumswitchin"];
+    } else if (compositionNumber == COMPOSITION_CLUSTERS) {
+        [self.clusterSwitch setOn:YES animated:YES];
+        [PdBase sendFloat:1 toReceiver:@"clusterswitchin"];
+    } else if (compositionNumber == COMPOSITION_SNOWBELLS) {
+        [self.snowBellSwitch setOn:YES animated:YES];
+        [PdBase sendFloat:1 toReceiver:@"snowbellswitchin"];
+    } else if (compositionNumber == COMPOSITION_NONE) {
+        // do nothing
+    }
+}
+
 
 #pragma mark - Custom Accessors
 
 // whenever loadPercentage is set, update the label
 - (void)setClusterComp:(float)value {
     [clusterProgress setProgress:value animated:YES];
+    if (value == 1.0 && self.continuousPerformance){
+        [self cueNextComposition:COMPOSITION_SNOWBELLS];
+        [self.clusterSwitch setOn:NO animated:YES];
+        [PdBase sendFloat:0 toReceiver:@"clusterswitchin"];
+        NSLog(@"Cue Snowbells...");
+    }
 }
 - (void)setIcedrumComp:(float)value {
     [iceDrumProgress setProgress:value animated:YES];
+    if (value == 1.0 && self.continuousPerformance){
+        [self cueNextComposition:COMPOSITION_CLUSTERS];
+        [self.iceDrumSwitch setOn:NO animated:YES];
+        [PdBase sendFloat:0 toReceiver:@"icedrumswitchin"];
+        NSLog(@"Cue Clusters...");
+    }
+    //NSLog([NSString stringWithFormat:@"%f", value]);
 }
 -(void)setSnowbellComp:(float)value {
     [snowBellProgress setProgress:value animated:YES];
@@ -202,6 +258,4 @@
         packet = MIDIPacketNext(packet);
     }
 }
-
-
 @end

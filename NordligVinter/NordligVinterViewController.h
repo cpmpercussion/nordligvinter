@@ -23,9 +23,9 @@
     NSOperationQueue *queue;
 }
 
-@property (nonatomic, assign) PGMidi *midi;
 
-
+@property (nonatomic) BOOL continuousPerformance;
+@property (strong, nonatomic) NSString *currentComposition;
 
 @property (weak, nonatomic) IBOutlet UISwitch *iceDrumSwitch;
 - (IBAction)iceDrumSwitched:(id)sender;
@@ -45,18 +45,26 @@
 @property (nonatomic) float defaultVol;
 @property (nonatomic) float inputVol;
 
+
+
+
+
 @property (weak, nonatomic) IBOutlet UIProgressView *defaultProgress;
 @property (weak, nonatomic) IBOutlet UIProgressView *inputLevel;
-
 @property (weak, nonatomic) IBOutlet UISwitch *reverbSwitch;
 - (IBAction)reverbSwitched:(id)sender;
-
-
 @property (weak, nonatomic) IBOutlet UISlider *inputLevelSlider;
 - (IBAction)inLevelSliderMoved:(id)sender;
 
+// MIDI
 @property (weak, nonatomic) IBOutlet UILabel *midiLabel;
 @property (weak, nonatomic) IBOutlet UILabel *midiInterfaceLabel;
+@property (nonatomic, assign) PGMidi *midi;
 
+// Continuous performance properties
+- (IBAction)continuousPerformanceSwitched:(UISwitch *)sender;
+- (void)cueNextComposition:(int) compositionNumber;
+- (void)playNextComposition:(NSTimer *) cueTimer;
+@property (nonatomic) int inBetweenPauseLength;
 
 @end

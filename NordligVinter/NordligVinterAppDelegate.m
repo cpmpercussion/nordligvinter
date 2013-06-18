@@ -20,12 +20,30 @@
 
 extern void bonk_tilde_setup(void);
 
+#define ICE_DRUM_PREFERENCE @"IceDrumLength"
+#define SNOWBELLS_PREFERENCE @"SnowBellsLength"
+#define CLUSTERS_PREFERENCE @"ClustersLength"
+#define PAUSE_PREFERENCE @"PauseLength"
+
+#define ICE_DRUM_DEFAULT @"160"
+#define SNOWBELLS_DEFAULT @"240"
+#define CLUSTERS_DEFAULT @"180"
+#define PAUSE_DEFAULT @"30"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjects:@[@"160",@"240",@"120"] forKeys:@[@"IceDrumLength",@"SnowBellsLength",@"ClustersLength"]];
+    NSDictionary *appDefaults = [NSDictionary dictionaryWithObjects:@[ICE_DRUM_DEFAULT,SNOWBELLS_DEFAULT,CLUSTERS_DEFAULT,PAUSE_DEFAULT] forKeys:@[ICE_DRUM_PREFERENCE,SNOWBELLS_PREFERENCE,CLUSTERS_PREFERENCE,PAUSE_PREFERENCE]];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+    //[[NSUserDefaults standardUserDefaults] synchronize];
+    
+    if (![[NSUserDefaults standardUserDefaults] stringForKey:ICE_DRUM_PREFERENCE] &&
+        ![[NSUserDefaults standardUserDefaults] stringForKey:CLUSTERS_PREFERENCE] &&
+        ![[NSUserDefaults standardUserDefaults] stringForKey:SNOWBELLS_PREFERENCE] &&
+        ![[NSUserDefaults standardUserDefaults] stringForKey:PAUSE_PREFERENCE]) {
+        
+    }
+
     
     
     // Override point for customization after application launch.
@@ -61,11 +79,12 @@ extern void bonk_tilde_setup(void);
     
     // Send Length Preferences to Pd
     [[NSUserDefaults standardUserDefaults] synchronize]; 
-    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"IceDrumLength"] intValue] toReceiver:@"icedrumlength"];
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:ICE_DRUM_PREFERENCE] intValue] toReceiver:@"icedrumlength"];
 
-    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"SnowBellsLength"] intValue] toReceiver:@"snowbellslength"];
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:SNOWBELLS_PREFERENCE] intValue] toReceiver:@"snowbellslength"];
 
-    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"ClustersLength"] intValue] toReceiver:@"clusterslength"];
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:CLUSTERS_PREFERENCE] intValue] toReceiver:@"clusterslength"];
+    [self.viewController setInBetweenPauseLength:[[[NSUserDefaults standardUserDefaults] stringForKey:PAUSE_PREFERENCE] intValue]];
 
     return YES;
 }
@@ -133,11 +152,12 @@ extern void bonk_tilde_setup(void);
     self.audioController.active = YES;
     
     [[NSUserDefaults standardUserDefaults] synchronize];
-    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"IceDrumLength"] intValue] toReceiver:@"icedrumlength"];
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:ICE_DRUM_PREFERENCE] intValue] toReceiver:@"icedrumlength"];
     
-    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"SnowBellsLength"] intValue] toReceiver:@"snowbellslength"];
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:SNOWBELLS_PREFERENCE] intValue] toReceiver:@"snowbellslength"];
     
-    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:@"ClustersLength"] intValue] toReceiver:@"clusterslength"];
+    [PdBase sendFloat:[[[NSUserDefaults standardUserDefaults] stringForKey:CLUSTERS_PREFERENCE] intValue] toReceiver:@"clusterslength"];
+    [self.viewController setInBetweenPauseLength:[[[NSUserDefaults standardUserDefaults] stringForKey:PAUSE_PREFERENCE] intValue]];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

@@ -17,14 +17,8 @@
 			<string>Ice Drum</string>
 			<key>Key</key>
 			<string>IceDrumLength</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Snow Bells</string>
-			<key>Key</key>
-			<string>SnowBellsLength</string>
+			<key>DefaultValue</key>
+			<string>160</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -33,6 +27,44 @@
 			<string>Clusters</string>
 			<key>Key</key>
 			<string>ClustersLength</string>
+			<key>DefaultValue</key>
+			<string>180</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Snow Bells</string>
+			<key>Key</key>
+			<string>SnowBellsLength</string>
+			<key>DefaultValue</key>
+			<string>240</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Continuous Performance Settings</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Pause Length (seconds)</string>
+			<key>Key</key>
+			<string>PauseLength</string>
+			<key>DefaultValue</key>
+			<string>30</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Key</key>
+			<string>Instructions</string>
+			<key>Title</key>
+			<string></string>
+			<key>FooterText</key>
+			<string>These settings change the durations (measured in seconds) of each composition in the Nordlig Vinter app.  The Pause Length setting changes the length of time in between each composition when using &quot;Continuous Performance&quot; mode.</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>

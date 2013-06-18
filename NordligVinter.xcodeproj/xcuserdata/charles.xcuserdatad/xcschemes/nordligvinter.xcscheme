@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "56BC959E155AF9F1009F5CA6"
-               BuildableName = "nordligvinter.app"
-               BlueprintName = "nordligvinter"
+               BuildableName = "Nordlig Vinter.app"
+               BlueprintName = "Nordlig Vinter"
                ReferencedContainer = "container:NordligVinter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "56BC959E155AF9F1009F5CA6"
-            BuildableName = "nordligvinter.app"
-            BlueprintName = "nordligvinter"
+            BuildableName = "Nordlig Vinter.app"
+            BlueprintName = "Nordlig Vinter"
             ReferencedContainer = "container:NordligVinter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "56BC959E155AF9F1009F5CA6"
-            BuildableName = "nordligvinter.app"
-            BlueprintName = "nordligvinter"
+            BuildableName = "Nordlig Vinter.app"
+            BlueprintName = "Nordlig Vinter"
             ReferencedContainer = "container:NordligVinter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "56BC959E155AF9F1009F5CA6"
-            BuildableName = "nordligvinter.app"
-            BlueprintName = "nordligvinter"
+            BuildableName = "Nordlig Vinter.app"
+            BlueprintName = "Nordlig Vinter"
             ReferencedContainer = "container:NordligVinter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
