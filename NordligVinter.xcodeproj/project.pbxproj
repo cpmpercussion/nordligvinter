@@ -496,7 +496,7 @@
 		567AEC911654D29F0030D64B /* iTunesArtwork512 */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork512; sourceTree = "<group>"; };
 		567AEC921654D29F0030D64B /* iTunesArtwork1024 */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork1024; sourceTree = "<group>"; };
 		569E3FC81732988400340E9D /* dual_random_pass.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dual_random_pass.pd; path = Resources/dual_random_pass.pd; sourceTree = "<group>"; };
-		56BC959F155AF9F1009F5CA6 /* Nordlig Vinter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nordlig Vinter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56BC959F155AF9F1009F5CA6 /* nordligvinter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nordligvinter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BC95A3155AF9F1009F5CA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		56BC95A5155AF9F1009F5CA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		56BC95A7155AF9F1009F5CA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -986,7 +986,7 @@
 		56BC95A0155AF9F1009F5CA6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				56BC959F155AF9F1009F5CA6 /* Nordlig Vinter.app */,
+				56BC959F155AF9F1009F5CA6 /* nordligvinter.app */,
 				56BC95C3155AF9F1009F5CA6 /* NordligVinterTests.octest */,
 			);
 			name = Products;
@@ -1487,9 +1487,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		56BC959E155AF9F1009F5CA6 /* Nordlig Vinter */ = {
+		56BC959E155AF9F1009F5CA6 /* nordligvinter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56BC95D5155AF9F2009F5CA6 /* Build configuration list for PBXNativeTarget "Nordlig Vinter" */;
+			buildConfigurationList = 56BC95D5155AF9F2009F5CA6 /* Build configuration list for PBXNativeTarget "nordligvinter" */;
 			buildPhases = (
 				56BC959B155AF9F1009F5CA6 /* Sources */,
 				56BC959D155AF9F1009F5CA6 /* Resources */,
@@ -1500,9 +1500,9 @@
 			dependencies = (
 				565FC292155EDAB700181C45 /* PBXTargetDependency */,
 			);
-			name = "Nordlig Vinter";
+			name = nordligvinter;
 			productName = NordligVinter;
-			productReference = 56BC959F155AF9F1009F5CA6 /* Nordlig Vinter.app */;
+			productReference = 56BC959F155AF9F1009F5CA6 /* nordligvinter.app */;
 			productType = "com.apple.product-type.application";
 		};
 		56BC95C2155AF9F1009F5CA6 /* NordligVinterTests */ = {
@@ -1551,7 +1551,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				56BC959E155AF9F1009F5CA6 /* Nordlig Vinter */,
+				56BC959E155AF9F1009F5CA6 /* nordligvinter */,
 				56BC95C2155AF9F1009F5CA6 /* NordligVinterTests */,
 			);
 		};
@@ -2043,7 +2043,7 @@
 		};
 		56BC95C9155AF9F1009F5CA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56BC959E155AF9F1009F5CA6 /* Nordlig Vinter */;
+			target = 56BC959E155AF9F1009F5CA6 /* nordligvinter */;
 			targetProxy = 56BC95C8155AF9F1009F5CA6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2221,7 +2221,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56BC95D5155AF9F2009F5CA6 /* Build configuration list for PBXNativeTarget "Nordlig Vinter" */ = {
+		56BC95D5155AF9F2009F5CA6 /* Build configuration list for PBXNativeTarget "nordligvinter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56BC95D6155AF9F2009F5CA6 /* Debug */,
