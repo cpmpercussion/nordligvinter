@@ -11,15 +11,9 @@
 #import "NordligVinterViewController.h"
 #import "PdBase.h"
 
-@class PGMidi;
-
-@interface NordligVinterAppDelegate : UIResponder <UIApplicationDelegate, PdReceiverDelegate> {
-    PGMidi  *midi;
-}
+@interface NordligVinterAppDelegate : UIResponder <UIApplicationDelegate, PdReceiverDelegate> {}
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) NordligVinterViewController *viewController;
 @property (strong, nonatomic, readonly) PdAudioController *audioController;
-
 @end

@@ -8,83 +8,42 @@
 
 #import "NordligVinterViewController.h"
 
-#import "PGMidi.h"
-#import <CoreMIDI/CoreMIDI.h>
-
 #define PAUSE_LENGTH 30
-
 #define COMPOSITION_NONE 0
 #define COMPOSITION_ICEDRUM 1
 #define COMPOSITION_CLUSTERS 2
 #define COMPOSITION_SNOWBELLS 3
 
-
-@interface NordligVinterViewController () <PGMidiDelegate, PGMidiSourceDelegate>
-
-@end
-
 @implementation NordligVinterViewController
-@synthesize iceDrumSwitch;
-@synthesize iceDrumProgress;
-@synthesize snowBellSwitch;
-@synthesize snowBellProgress;
-@synthesize clusterSwitch;
-@synthesize reverbSwitch;
-@synthesize clusterProgress;
-@synthesize defaultProgress;
-@synthesize inputLevel;
-@synthesize inputLevelSlider;
-@synthesize midiLabel;
-@synthesize midiInterfaceLabel;
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [iceDrumSwitch setOn:NO];
-    [snowBellSwitch setOn:NO];
-    [clusterSwitch setOn:NO];
-    [iceDrumProgress setProgress:0];
-    [snowBellProgress setProgress:0];
-    [clusterProgress setProgress:0];
-    [defaultProgress setProgress:0];
+    [self.iceDrumSwitch setOn:NO];
+    [self.snowBellSwitch setOn:NO];
+    [self.clusterSwitch setOn:NO];
+    [self.iceDrumProgress setProgress:0];
+    [self.snowBellProgress setProgress:0];
+    [self.clusterProgress setProgress:0];
+    [self.defaultProgress setProgress:0];
+    [self.midiLabel setText: @""];
+    [self.midiInterfaceLabel setText: @""];
     
-    [midiLabel setText: @""];
-    [midiInterfaceLabel setText: @""];
+    self.midi = [[PGMidi alloc] init];
+    self.midi.delegate = self;
+    [self.midi enableNetwork:YES];
+    [self attachToAllExistingSources];
     
-    
-    
+//    for (PGMidiSource *source in self.midi.sources)
+//    {
+//        NSLog(source.name);
+//    }
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        // return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-        if (interfaceOrientation == UIInterfaceOrientationPortrait) {
-            return YES;
-        } else {
-            return NO;
-        }
-    } else {
-        if (interfaceOrientation == UIInterfaceOrientationPortrait) {
-            return YES;
-        } else {
-            return NO;
-        }
-    }    
-}
-
-- (IBAction)iceDrumSwitched:(id)sender {
-    if (iceDrumSwitch.on)
+- (IBAction)iceDrumSwitched:(UISwitch *)sender {
+    if (sender.on)
     {
         [PdBase sendFloat:1 toReceiver:@"icedrumswitchin"];
         NSLog(@"ice drum switched ON!");
@@ -94,8 +53,8 @@
         NSLog(@"ice drum switched OFF!");
     } 
 }
-- (IBAction)snowBellSwitched:(id)sender {
-    if (snowBellSwitch.on) 
+- (IBAction)snowBellSwitched:(UISwitch *)sender {
+    if (sender.on)
     {
         [PdBase sendFloat:1 toReceiver:@"snowbellswitchin"];
         NSLog(@"snow bells switched ON!");
@@ -105,8 +64,8 @@
         NSLog(@"snow bells switched OFF!");
     } 
 }
-- (IBAction)clusterSwitched:(id)sender {
-    if (clusterSwitch.on) 
+- (IBAction)clusterSwitched:(UISwitch *)sender {
+    if (sender.on)
     {
         [PdBase sendFloat:1 toReceiver:@"clusterswitchin"];
         NSLog(@"clusters switched ON!");
@@ -117,8 +76,8 @@
     } 
 }
 
-- (IBAction)reverbSwitched:(id)sender {
-    if (reverbSwitch.on)
+- (IBAction)reverbSwitched:(UISwitch *)sender {
+    if (sender.on)
     {
         [PdBase sendFloat:1 toReceiver:@"fxswitchin"];
         NSLog(@"Reverb switched ON!");
@@ -128,20 +87,16 @@
     }
 }
 
-- (IBAction)inLevelSliderMoved:(id)sender {
-    float a = inputLevelSlider.value * 100;
-    
-    [PdBase sendFloat:a toReceiver:@"reverbsend"];
+- (IBAction)inLevelSliderMoved:(UISlider *)sender {
+    [PdBase sendFloat:(sender.value * 100) toReceiver:@"reverbsend"];
 }
 
 - (IBAction)continuousPerformanceSwitched:(UISwitch *)sender {
-    // Start continuous performance.
     self.continuousPerformance = sender.on;
 }
 
 
 - (void)cueNextComposition:(int)compositionNumber {
-    
     [NSTimer scheduledTimerWithTimeInterval:self.inBetweenPauseLength
                                      target:self
                                    selector:@selector(playNextComposition:)
@@ -171,7 +126,7 @@
 
 // whenever loadPercentage is set, update the label
 - (void)setClusterComp:(float)value {
-    [clusterProgress setProgress:value animated:YES];
+    [self.clusterProgress setProgress:value animated:YES];
     if (value == 1.0 && self.continuousPerformance){
         [self cueNextComposition:COMPOSITION_SNOWBELLS];
         [self.clusterSwitch setOn:NO animated:YES];
@@ -180,76 +135,63 @@
     }
 }
 - (void)setIcedrumComp:(float)value {
-    [iceDrumProgress setProgress:value animated:YES];
+    [self.iceDrumProgress setProgress:value animated:YES];
     if (value == 1.0 && self.continuousPerformance){
         [self cueNextComposition:COMPOSITION_CLUSTERS];
         [self.iceDrumSwitch setOn:NO animated:YES];
         [PdBase sendFloat:0 toReceiver:@"icedrumswitchin"];
         NSLog(@"Cue Clusters...");
     }
-    //NSLog([NSString stringWithFormat:@"%f", value]);
 }
 -(void)setSnowbellComp:(float)value {
-    [snowBellProgress setProgress:value animated:YES];
+    [self.snowBellProgress setProgress:value animated:YES];
 }
 -(void)setDefaultVol:(float)value {
-    [defaultProgress setProgress:value animated:YES];
+    [self.defaultProgress setProgress:value animated:YES];
 }
 -(void)setInputVol:(float)inputVol {
-    [inputLevel setProgress:inputVol animated:YES];
+    [self.inputLevel setProgress:inputVol animated:YES];
 }
 
 
 #pragma mark Midi
-
 -(void) attachToAllExistingSources
 {
-    for (PGMidiSource *source in midi.sources)
+    for (PGMidiSource *source in self.midi.sources)
     {
         source.delegate = self;
+        [self.midiLabel setText:@"MIDI:"];
+        [self.midiInterfaceLabel setText:source.name];
     }
 }
 
--(void) setMidi:(PGMidi*)m
-{
-    midi.delegate = nil;
-    midi = m;
-    midi.delegate = self;
-    
-    [self attachToAllExistingSources];
-}
+//-(void) setMidi:(PGMidi*)m
+//{
+//    if (m) {
+//        self.midi.delegate = nil;
+//        self.midi = m;
+//        self.midi.delegate = self;
+//        [self attachToAllExistingSources];
+//    }
+//}
 
 -(void) midi:(PGMidi*)midi sourceAdded:(PGMidiSource *)source
 {
-    [midiLabel setText:@"MIDI:"];
-    [midiInterfaceLabel setText:source.name];
+    [self.midiLabel setText:@"MIDI:"];
+    [self.midiInterfaceLabel setText:source.name];
     source.delegate = self;
 }
 
 -(void) midi:(PGMidi*)midi sourceRemoved:(PGMidiSource *)source
 {
-    [midiLabel setText:@""];
-    [midiInterfaceLabel setText:@""];
-    
-}
-
--(void) midi:(PGMidi*)midi destinationAdded:(PGMidiDestination *)destination
-{
-
-}
-
--(void) midi:(PGMidi*)midi destinationRemoved:(PGMidiDestination *)destination
-{
-    
+    [self.midiLabel setText:@""];
+    [self.midiInterfaceLabel setText:@""];
 }
 
 
 -(void) midiSource:(PGMidiSource *)input midiReceived:(const MIDIPacketList *)packetList
 {    
     const MIDIPacket *packet = &packetList->packet[0];
-    //
-    // Cycle through midi packets and do the parsing.
-    //
     for (int i = 0; i < packetList->numPackets; ++i)
     {
         if ((packet->length == 3) && ((packet->data[0] & 0xf0) == 0x90) && (packet->data[2] != 0)) {
@@ -258,4 +200,8 @@
         packet = MIDIPacketNext(packet);
     }
 }
+
+- (void) midi:(PGMidi*)midi destinationAdded:(PGMidiDestination *)destination { }
+- (void) midi:(PGMidi*)midi destinationRemoved:(PGMidiDestination *)destination { }
+
 @end

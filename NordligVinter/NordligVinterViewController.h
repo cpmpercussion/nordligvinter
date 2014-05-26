@@ -8,21 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
-
-
+#import "PGMidi.h"
+#import "PGArc.h"
 #import "PdDispatcher.h"
+#import <CoreMIDI/CoreMIDI.h>
 
 @class PGMidi;
 
-@interface NordligVinterViewController : UIViewController {
-    void *patch;
-    
-    PGMidi *midi;
-    
-    CMMotionManager *motionManager;
-    NSOperationQueue *queue;
+@interface NordligVinterViewController : UIViewController <PGMidiDelegate, PGMidiSourceDelegate> {
+//    void *patch;
+//    NSOperationQueue *queue;
 }
-
 
 @property (nonatomic) BOOL continuousPerformance;
 @property (strong, nonatomic) NSString *currentComposition;
@@ -45,10 +41,6 @@
 @property (nonatomic) float defaultVol;
 @property (nonatomic) float inputVol;
 
-
-
-
-
 @property (weak, nonatomic) IBOutlet UIProgressView *defaultProgress;
 @property (weak, nonatomic) IBOutlet UIProgressView *inputLevel;
 @property (weak, nonatomic) IBOutlet UISwitch *reverbSwitch;
@@ -57,9 +49,9 @@
 - (IBAction)inLevelSliderMoved:(id)sender;
 
 // MIDI
+@property (nonatomic, strong) PGMidi *midi;
 @property (weak, nonatomic) IBOutlet UILabel *midiLabel;
 @property (weak, nonatomic) IBOutlet UILabel *midiInterfaceLabel;
-@property (nonatomic, assign) PGMidi *midi;
 
 // Continuous performance properties
 - (IBAction)continuousPerformanceSwitched:(UISwitch *)sender;

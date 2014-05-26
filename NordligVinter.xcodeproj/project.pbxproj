@@ -11,7 +11,6 @@
 		56321F6016CCB4DD00D75504 /* PGMidiAllSources.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56321F5C16CCB4DD00D75504 /* PGMidiAllSources.mm */; };
 		56321F6116CCB4DD00D75504 /* PGMidiFind.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56321F5E16CCB4DD00D75504 /* PGMidiFind.mm */; };
 		56321F6416CCB7AB00D75504 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56321F6316CCB7AB00D75504 /* CoreMIDI.framework */; };
-		56321F6816CDFB5E00D75504 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56321F6716CDFB5E00D75504 /* CoreMotion.framework */; };
 		5653E99C164FC066003DA903 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5653E998164FC066003DA903 /* Default-568h.png */; };
 		5653E99D164FC066003DA903 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5653E999164FC066003DA903 /* Default-568h@2x.png */; };
 		5653E99E164FC066003DA903 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5653E99A164FC066003DA903 /* Default.png */; };
@@ -43,7 +42,6 @@
 		56BC95B7155AF9F1009F5CA6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BC95B5155AF9F1009F5CA6 /* MainStoryboard_iPhone.storyboard */; };
 		56BC95BA155AF9F1009F5CA6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BC95B8155AF9F1009F5CA6 /* MainStoryboard_iPad.storyboard */; };
 		56BC95BD155AF9F1009F5CA6 /* NordligVinterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC95BC155AF9F1009F5CA6 /* NordligVinterViewController.m */; };
-		56BC95C5155AF9F1009F5CA6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95C4155AF9F1009F5CA6 /* SenTestingKit.framework */; };
 		56BC95C6155AF9F1009F5CA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95A3155AF9F1009F5CA6 /* UIKit.framework */; };
 		56BC95C7155AF9F1009F5CA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95A5155AF9F1009F5CA6 /* Foundation.framework */; };
 		56E682E1164B75A400BE1D9D /* bellsynth.pd in Resources */ = {isa = PBXBuildFile; fileRef = 56E68168164B75A300BE1D9D /* bellsynth.pd */; };
@@ -470,7 +468,6 @@
 		56321F5D16CCB4DD00D75504 /* PGMidiFind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMidiFind.h; sourceTree = "<group>"; };
 		56321F5E16CCB4DD00D75504 /* PGMidiFind.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PGMidiFind.mm; sourceTree = "<group>"; };
 		56321F6316CCB7AB00D75504 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
-		56321F6716CDFB5E00D75504 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		5653E998164FC066003DA903 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		5653E999164FC066003DA903 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5653E99A164FC066003DA903 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -509,7 +506,6 @@
 		56BC95BB155AF9F1009F5CA6 /* NordligVinterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NordligVinterViewController.h; sourceTree = "<group>"; };
 		56BC95BC155AF9F1009F5CA6 /* NordligVinterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NordligVinterViewController.m; sourceTree = "<group>"; };
 		56BC95C3155AF9F1009F5CA6 /* NordligVinterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NordligVinterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		56BC95C4155AF9F1009F5CA6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		56E68168164B75A300BE1D9D /* bellsynth.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bellsynth.pd; path = Resources/bellsynth.pd; sourceTree = "<group>"; };
 		56E6816A164B75A300BE1D9D /* ice1-short-mono.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ice1-short-mono.wav"; sourceTree = "<group>"; };
 		56E6816B164B75A300BE1D9D /* ice2-short-mono.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ice2-short-mono.wav"; sourceTree = "<group>"; };
@@ -898,7 +894,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56321F6816CDFB5E00D75504 /* CoreMotion.framework in Frameworks */,
 				56321F6416CCB7AB00D75504 /* CoreMIDI.framework in Frameworks */,
 				565FC297155EDAE800181C45 /* AudioToolbox.framework in Frameworks */,
 				565FC295155EDAE000181C45 /* AVFoundation.framework in Frameworks */,
@@ -913,7 +908,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56BC95C5155AF9F1009F5CA6 /* SenTestingKit.framework in Frameworks */,
 				56BC95C6155AF9F1009F5CA6 /* UIKit.framework in Frameworks */,
 				56BC95C7155AF9F1009F5CA6 /* Foundation.framework in Frameworks */,
 			);
@@ -988,12 +982,10 @@
 		56BC95A2155AF9F1009F5CA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				56321F6716CDFB5E00D75504 /* CoreMotion.framework */,
 				56321F6316CCB7AB00D75504 /* CoreMIDI.framework */,
 				56BC95A3155AF9F1009F5CA6 /* UIKit.framework */,
 				56BC95A5155AF9F1009F5CA6 /* Foundation.framework */,
 				56BC95A7155AF9F1009F5CA6 /* CoreGraphics.framework */,
-				56BC95C4155AF9F1009F5CA6 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1504,6 +1496,7 @@
 		56BC9596155AF9F0009F5CA6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Charles Martin Percussion";
 			};
