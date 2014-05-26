@@ -46,8 +46,6 @@
 		56BC95C5155AF9F1009F5CA6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95C4155AF9F1009F5CA6 /* SenTestingKit.framework */; };
 		56BC95C6155AF9F1009F5CA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95A3155AF9F1009F5CA6 /* UIKit.framework */; };
 		56BC95C7155AF9F1009F5CA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BC95A5155AF9F1009F5CA6 /* Foundation.framework */; };
-		56BC95CF155AF9F1009F5CA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56BC95CD155AF9F1009F5CA6 /* InfoPlist.strings */; };
-		56BC95D2155AF9F2009F5CA6 /* NordligVinterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BC95D1155AF9F2009F5CA6 /* NordligVinterTests.m */; };
 		56E682E1164B75A400BE1D9D /* bellsynth.pd in Resources */ = {isa = PBXBuildFile; fileRef = 56E68168164B75A300BE1D9D /* bellsynth.pd */; };
 		56E682E2164B75A400BE1D9D /* ice1-short-mono.wav in Resources */ = {isa = PBXBuildFile; fileRef = 56E6816A164B75A300BE1D9D /* ice1-short-mono.wav */; };
 		56E682E3164B75A400BE1D9D /* ice2-short-mono.wav in Resources */ = {isa = PBXBuildFile; fileRef = 56E6816B164B75A300BE1D9D /* ice2-short-mono.wav */; };
@@ -512,10 +510,6 @@
 		56BC95BC155AF9F1009F5CA6 /* NordligVinterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NordligVinterViewController.m; sourceTree = "<group>"; };
 		56BC95C3155AF9F1009F5CA6 /* NordligVinterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NordligVinterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BC95C4155AF9F1009F5CA6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		56BC95CC155AF9F1009F5CA6 /* NordligVinterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NordligVinterTests-Info.plist"; sourceTree = "<group>"; };
-		56BC95CE155AF9F1009F5CA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		56BC95D0155AF9F2009F5CA6 /* NordligVinterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NordligVinterTests.h; sourceTree = "<group>"; };
-		56BC95D1155AF9F2009F5CA6 /* NordligVinterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NordligVinterTests.m; sourceTree = "<group>"; };
 		56E68168164B75A300BE1D9D /* bellsynth.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bellsynth.pd; path = Resources/bellsynth.pd; sourceTree = "<group>"; };
 		56E6816A164B75A300BE1D9D /* ice1-short-mono.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ice1-short-mono.wav"; sourceTree = "<group>"; };
 		56E6816B164B75A300BE1D9D /* ice2-short-mono.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ice2-short-mono.wav"; sourceTree = "<group>"; };
@@ -976,7 +970,6 @@
 				565FC294155EDAE000181C45 /* AVFoundation.framework */,
 				565FC298155EDB1F00181C45 /* Resources */,
 				56BC95A9155AF9F1009F5CA6 /* NordligVinter */,
-				56BC95CA155AF9F1009F5CA6 /* NordligVinterTests */,
 				56BC95A2155AF9F1009F5CA6 /* Frameworks */,
 				56BC95A0155AF9F1009F5CA6 /* Products */,
 				565FC288155ED9F100181C45 /* libpd.xcodeproj */,
@@ -1032,25 +1025,6 @@
 				56BC95AC155AF9F1009F5CA6 /* InfoPlist.strings */,
 				56BC95AF155AF9F1009F5CA6 /* main.m */,
 				56BC95B1155AF9F1009F5CA6 /* NordligVinter-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		56BC95CA155AF9F1009F5CA6 /* NordligVinterTests */ = {
-			isa = PBXGroup;
-			children = (
-				56BC95D0155AF9F2009F5CA6 /* NordligVinterTests.h */,
-				56BC95D1155AF9F2009F5CA6 /* NordligVinterTests.m */,
-				56BC95CB155AF9F1009F5CA6 /* Supporting Files */,
-			);
-			path = NordligVinterTests;
-			sourceTree = "<group>";
-		};
-		56BC95CB155AF9F1009F5CA6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				56BC95CC155AF9F1009F5CA6 /* NordligVinterTests-Info.plist */,
-				56BC95CD155AF9F1009F5CA6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1977,7 +1951,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56BC95CF155AF9F1009F5CA6 /* InfoPlist.strings in Resources */,
 				567AEC931654D29F0030D64B /* Icon-72.png in Resources */,
 				567AEC941654D29F0030D64B /* Icon-72@2x.png in Resources */,
 				567AEC951654D29F0030D64B /* Icon-Small-50.png in Resources */,
@@ -2029,7 +2002,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56BC95D2155AF9F2009F5CA6 /* NordligVinterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2071,14 +2043,6 @@
 				56BC95B9155AF9F1009F5CA6 /* en */,
 			);
 			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		56BC95CD155AF9F1009F5CA6 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				56BC95CE155AF9F1009F5CA6 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
