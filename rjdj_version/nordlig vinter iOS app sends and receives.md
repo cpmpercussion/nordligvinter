@@ -1,0 +1,11 @@
+sends
+icedrumcomp
+clustercomp
+snowbellcomp
+defaultvol
+
+receives
+icedrumswitchin
+clusterswitchin
+snowbellswitchin
+fxswitchin
